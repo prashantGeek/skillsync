@@ -1,9 +1,23 @@
-import Image from "next/image";
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import HeroSection from '@/components/sections/HeroSection';
+import FeaturesSection from '@/components/sections/FeaturesSection';
+import PopularCoursesSection from '@/components/sections/PopularCoursesSection';
+import TestimonialsSection from '@/components/sections/TestimonialsSection';
+import CTASection from '@/components/sections/CTASection';
 
 export default function Home() {
   return (
-    <div>
-      <h1>Welcome to Home Page</h1>
+    <div className="min-h-screen bg-white">
+      <Header />
+      <main>
+        <HeroSection />
+        <FeaturesSection />
+        <PopularCoursesSection />
+        <TestimonialsSection />
+        <CTASection />
+      </main>
+      <Footer />
     </div>
-  )
+  );
 }
