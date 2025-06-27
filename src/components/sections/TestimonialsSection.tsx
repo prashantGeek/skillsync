@@ -48,14 +48,14 @@ const stats = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Trusted by Professionals Worldwide
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             See how SkillSync is helping teams and individuals achieve their learning goals
           </p>
         </div>
@@ -64,10 +64,10 @@ export default function TestimonialsSection() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-4xl lg:text-5xl font-bold text-blue-600 mb-2">
+              <div className="text-4xl lg:text-5xl font-bold text-blue-600 dark:text-blue-400 mb-2">
                 {stat.number}
               </div>
-              <div className="text-gray-600 font-medium">
+              <div className="text-gray-600 dark:text-gray-300 font-medium">
                 {stat.label}
               </div>
             </div>
@@ -89,7 +89,7 @@ export default function TestimonialsSection() {
                 </div>
 
                 {/* Quote */}
-                <blockquote className="text-gray-700 text-lg leading-relaxed mb-6">
+                <blockquote className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6">
                   &ldquo;{testimonial.quote}&rdquo;
                 </blockquote>
 
@@ -99,9 +99,9 @@ export default function TestimonialsSection() {
                     {testimonial.name.split(' ').map(n => n[0]).join('')}
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                    <div className="text-gray-600 text-sm">{testimonial.role}</div>
-                    <div className="text-blue-600 text-sm font-medium">{testimonial.company}</div>
+                    <div className="font-semibold text-gray-900 dark:text-white">{testimonial.name}</div>
+                    <div className="text-gray-600 dark:text-gray-300 text-sm">{testimonial.role}</div>
+                    <div className="text-blue-600 dark:text-blue-400 text-sm font-medium">{testimonial.company}</div>
                   </div>
                 </div>
               </CardContent>

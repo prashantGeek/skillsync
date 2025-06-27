@@ -78,13 +78,13 @@ const courses = [
 
 export default function PopularCoursesSection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Most Popular Courses
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Discover top-rated courses that professionals are taking to advance their careers
           </p>
         </div>
@@ -113,25 +113,25 @@ export default function PopularCoursesSection() {
 
               <CardContent className="p-6">
                 <div className="mb-4">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2">
                     {course.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-2">by {course.instructor}</p>
-                  <p className="text-sm text-gray-500">{course.level}</p>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">by {course.instructor}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">{course.level}</p>
                 </div>
 
                 <div className="flex items-center mb-4">
                   <div className="flex items-center mr-4">
                     <span className="text-yellow-500 text-sm">★</span>
-                    <span className="text-sm font-semibold ml-1">{course.rating}</span>
+                    <span className="text-sm font-semibold ml-1 text-gray-900 dark:text-white">{course.rating}</span>
                   </div>
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-gray-500 dark:text-gray-400">
                     ({course.students.toLocaleString()} students)
                   </span>
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-gray-900">{course.price}</span>
+                  <span className="text-2xl font-bold text-gray-900 dark:text-white">{course.price}</span>
                   <Button size="sm">
                     Enroll Now
                   </Button>
