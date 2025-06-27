@@ -2,7 +2,7 @@ import Button from '../ui/Button';
 
 export default function HeroSection() {
   return (
-    <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white">
+    <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 dark:from-gray-800 dark:via-gray-900 dark:to-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -10,19 +10,19 @@ export default function HeroSection() {
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
                 Upskill your team with
-                <span className="block text-yellow-400">expert-led courses</span>
+                <span className="block text-yellow-400 dark:text-yellow-300">expert-led courses</span>
               </h1>
-              <p className="text-xl lg:text-2xl text-blue-100 leading-relaxed">
+              <p className="text-xl lg:text-2xl text-blue-100 dark:text-gray-300 leading-relaxed">
                 Give your workforce the skills they need to stay competitive. 
                 Access 25,000+ courses taught by real-world experts.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold">
+              <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 dark:bg-yellow-400 dark:hover:bg-yellow-500 text-black font-bold">
                 Start Free Trial
               </Button>
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-700">
+              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-700 dark:border-gray-300 dark:text-gray-300 dark:hover:bg-gray-300 dark:hover:text-gray-900">
                 Request Demo
               </Button>
             </div>
