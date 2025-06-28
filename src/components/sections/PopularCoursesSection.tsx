@@ -78,7 +78,9 @@ const courses = [
 
 export default function PopularCoursesSection() {
   return (
-    <section className="py-20 bg-white dark:bg-gray-900">
+
+    <section className="py-20 bg-white dark:bg-gray-900 transition-colors">
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -105,7 +107,7 @@ export default function PopularCoursesSection() {
                   </div>
                 </div>
                 <div className="absolute top-4 left-4">
-                  <span className="bg-yellow-400 text-black px-2 py-1 rounded text-xs font-semibold">
+                  <span className="bg-yellow-400 dark:bg-yellow-300 text-black px-2 py-1 rounded text-xs font-semibold">
                     {course.category}
                   </span>
                 </div>
@@ -122,7 +124,9 @@ export default function PopularCoursesSection() {
 
                 <div className="flex items-center mb-4">
                   <div className="flex items-center mr-4">
-                    <span className="text-yellow-500 text-sm">★</span>
+
+                    <span className="text-yellow-500 dark:text-yellow-400 text-sm">★</span>
+
                     <span className="text-sm font-semibold ml-1 text-gray-900 dark:text-white">{course.rating}</span>
                   </div>
                   <span className="text-sm text-gray-500 dark:text-gray-400">

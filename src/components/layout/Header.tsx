@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Button from '../ui/Button';
-import ThemeToggle from '../ui/ThemeToggle';
 
 export default function Header() {
   return (
@@ -48,7 +47,7 @@ export default function Header() {
 
           {/* Theme Toggle and Auth Buttons */}
           <div className="flex items-center space-x-4">
-            <ThemeToggle />
+          
             <Button variant="outline" size="sm">
               Log In
             </Button>
