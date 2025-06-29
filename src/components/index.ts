@@ -1,7 +1,6 @@
 // UI Components
 export { default as Button } from './ui/Button';
 export { default as Card, CardHeader, CardContent, CardFooter } from './ui/Card';
-export { default as ThemeToggle } from './ui/ThemeToggle';
 
 // Layout Components
 export { default as Header } from './layout/Header';
