@@ -2,22 +2,22 @@ import Button from '../ui/Button';
 
 export default function CTASection() {
   return (
-    <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 dark:from-gray-800 dark:to-gray-900">
+    <section className="py-20 bg-gradient-to-r from-blue-500 to-indigo-600">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Team?
           </h2>
-          <p className="text-xl text-blue-100 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
             Join thousands of companies that trust SkillSync to upskill their workforce. 
             Start your free trial today and see the difference quality learning makes.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 dark:bg-yellow-400 dark:hover:bg-yellow-500 text-black font-bold px-8">
+            <Button size="lg" className="bg-amber-400 hover:bg-amber-500 text-black font-bold px-8">
               Start Free 30-Day Trial
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-700 dark:border-gray-300 dark:text-gray-300 dark:hover:bg-gray-300 dark:hover:text-gray-900 px-8">
+            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600 px-8">
               Schedule a Demo
             </Button>
           </div>
@@ -31,7 +31,7 @@ export default function CTASection() {
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">No Credit Card Required</h3>
-              <p className="text-blue-100 dark:text-gray-300 text-sm">Start your trial instantly without any payment information</p>
+              <p className="text-blue-100 text-sm">Start your trial instantly without any payment information</p>
             </div>
             
             <div className="flex flex-col items-center">
@@ -41,7 +41,7 @@ export default function CTASection() {
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">24/7 Support</h3>
-              <p className="text-blue-100 dark:text-gray-300 text-sm">Get help whenever you need it from our expert support team</p>
+              <p className="text-blue-100 text-sm">Get help whenever you need it from our expert support team</p>
             </div>
             
             <div className="flex flex-col items-center">
@@ -51,7 +51,7 @@ export default function CTASection() {
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Enterprise Security</h3>
-              <p className="text-blue-100 dark:text-gray-300 text-sm">Bank-level security with SOC 2 compliance and SSO integration</p>
+              <p className="text-blue-100 text-sm">Bank-level security with SOC 2 compliance and SSO integration</p>
             </div>
           </div>
         </div>
