@@ -59,28 +59,28 @@ const features = [
 
 export default function FeaturesSection() {
  return (
- <section className="py-20 bg-black">
+ <section className="py-20 bg-gray-50">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="text-center mb-16">
- <h2 className="text-4xl font-bold text-white mb-4">
+ <h2 className="text-4xl font-bold text-black mb-4">
  Why Choose SkillSync? 
  </h2>
- <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+ <p className="text-xl text-gray-600 max-w-3xl mx-auto">
  Transform your workforce with comprehensive learning solutions designed for modern businesses
  </p>
  </div>
 
  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
  {features.map((feature, index) => (
- <Card key={index} hover className="h-full bg-gray-900 border-purple-600/30 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/20">
+ <Card key={index} hover className="h-full bg-white border-purple-200 hover:border-purple-400 hover:shadow-lg hover:shadow-purple-500/10">
  <CardContent className="text-center">
- <div className="w-16 h-16 bg-purple-600/20 border border-purple-500 rounded-full flex items-center justify-center mx-auto mb-6 text-purple-400">
+ <div className="w-16 h-16 bg-purple-100 border border-purple-300 rounded-full flex items-center justify-center mx-auto mb-6 text-purple-600">
  {feature.icon}
  </div>
- <h3 className="text-xl font-semibold text-white mb-4">
+ <h3 className="text-xl font-semibold text-black mb-4">
  {feature.title}
  </h3>
- <p className="text-gray-300 leading-relaxed">
+ <p className="text-gray-600 leading-relaxed">
  {feature.description}
  </p>
  </CardContent>
