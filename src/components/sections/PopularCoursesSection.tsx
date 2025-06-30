@@ -77,6 +77,7 @@ const courses = [
 ];
 
 export default function PopularCoursesSection() {
+
  return (
  <section className="py-20 bg-white transition-colors">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -120,6 +121,7 @@ export default function PopularCoursesSection() {
  <p className="text-sm text-gray-500">{course.level}</p>
  </div>
 
+
  <div className="flex items-center mb-4">
  <div className="flex items-center mr-4">
  <span className="text-amber-400 text-sm">★</span>
@@ -129,6 +131,7 @@ export default function PopularCoursesSection() {
  ({course.students.toLocaleString()} students)
  </span>
  </div>
+
 
  <div className="flex items-center justify-between">
  <span className="text-2xl font-bold text-gray-900">{course.price}</span>
