@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Button from '../ui/Button';
 
 export default function Header() {
@@ -8,8 +9,15 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-blue-500">
-              SkillSync
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/logos/isolated-monochrome-black.svg"
+                alt="SkillSync Logo"
+                width={180}
+                height={45}
+                className="h-8 w-auto"
+                priority
+              />
             </Link>
           </div>
 
