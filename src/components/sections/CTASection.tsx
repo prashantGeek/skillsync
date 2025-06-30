@@ -14,10 +14,10 @@ export default function CTASection() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="bg-amber-400 hover:bg-amber-500 text-black font-bold px-8">
+            <Button className="px-8 py-3 text-lg bg-amber-400 hover:bg-amber-500 text-black hover:text-black font-bold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-400">
               Start Free 30-Day Trial
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600 px-8">
+            <Button className="px-8 py-3 text-lg border-2 border-white text-white hover:bg-white hover:text-blue-600 bg-transparent font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white">
               Schedule a Demo
             </Button>
           </div>

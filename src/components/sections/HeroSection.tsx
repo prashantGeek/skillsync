@@ -7,25 +7,24 @@ export default function HeroSection() {
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
  {/* Left Content */}
  <div className="space-y-8">
- <div className="space-y-4">
- <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
- Upskill your team with
- <span className="block text-amber-300">expert-led courses</span>
- </h1>
+ <div className="space-y-4">            
+  <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+              Upskill your team with
+              <br />
+              <span className="text-amber-300">expert-led courses</span>
+            </h1>
  <p className="text-xl lg:text-2xl text-blue-100 leading-relaxed">
  Give your workforce the skills they need to stay competitive. 
  Access 25,000+ courses taught by real-world experts.
  </p>
- </div>
-
- <div className="flex flex-col sm:flex-row gap-4">
- <Button size="lg" className="bg-amber-400 hover:bg-amber-500 text-black font-bold">
- Start Free Trial
- </Button>
- <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600">
- Request Demo
- </Button>
- </div>
+ </div>          <div className="flex flex-col sm:flex-row gap-4">
+            <Button className="px-6 py-3 text-lg bg-amber-400 hover:bg-amber-500 text-black hover:text-black font-bold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-400">
+              Start Free Trial
+            </Button>
+            <Button className="px-6 py-3 text-lg border-2 border-white text-white hover:bg-white hover:text-blue-600 bg-transparent font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white">
+              Request Demo
+            </Button>
+          </div>
 
  {/* Trust Indicators */}
  <div className="pt-8">
