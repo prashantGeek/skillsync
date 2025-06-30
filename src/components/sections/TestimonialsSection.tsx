@@ -52,14 +52,14 @@ const stats = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-20 bg-gray-50 transition-colors">
+    <section className="py-20 bg-black transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-white mb-4">
             Trusted by Professionals Worldwide
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             See how SkillSync is helping teams and individuals achieve their
             learning goals
           </p>
@@ -69,10 +69,10 @@ export default function TestimonialsSection() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-4xl lg:text-5xl font-bold text-blue-500 mb-2">
+              <div className="text-4xl lg:text-5xl font-bold text-purple-500 mb-2">
                 {stat.number}
               </div>
-              <div className="text-gray-600 font-medium">{stat.label}</div>
+              <div className="text-gray-300 font-medium">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -80,14 +80,14 @@ export default function TestimonialsSection() {
         {/* Testimonials */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonials.map((testimonial) => (
-            <Card key={testimonial.id} className="h-full">
+            <Card key={testimonial.id} className="h-full bg-gray-900 border-purple-600/30">
               <CardContent className="p-8">
                 {/* Rating */}
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <svg
                       key={i}
-                      className="w-5 h-5 text-amber-400"
+                      className="w-5 h-5 text-purple-400"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -97,26 +97,26 @@ export default function TestimonialsSection() {
                 </div>
 
                 {/* Quote */}
-                <blockquote className="text-gray-700 text-lg leading-relaxed mb-6">
+                <blockquote className="text-gray-300 text-lg leading-relaxed mb-6">
                   &ldquo;{testimonial.quote}&rdquo;
                 </blockquote>
 
                 {/* Author */}
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-300 to-indigo-400 rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-800 rounded-full flex items-center justify-center text-white font-semibold mr-4">
                     {testimonial.name
                       .split(" ")
                       .map((n) => n[0])
                       .join("")}
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">
+                    <div className="font-semibold text-white">
                       {testimonial.name}
                     </div>
-                    <div className="text-gray-600 text-sm">
+                    <div className="text-gray-400 text-sm">
                       {testimonial.role}
                     </div>
-                    <div className="text-blue-500 text-sm font-medium">
+                    <div className="text-purple-400 text-sm font-medium">
                       {testimonial.company}
                     </div>
                   </div>
