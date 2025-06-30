@@ -78,13 +78,13 @@ const courses = [
 
 export default function PopularCoursesSection() {
   return (
-    <section className="py-20 bg-white transition-colors">
+    <section className="py-20 bg-black transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-white mb-4">
             Most Popular Courses
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover top-rated courses that professionals are taking to advance
             their careers
           </p>
@@ -92,9 +92,9 @@ export default function PopularCoursesSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {courses.map((course) => (
-            <Card key={course.id} hover className="overflow-hidden">
+            <Card key={course.id} hover className="overflow-hidden bg-gray-900 border-purple-600/30 hover:border-purple-500">
               {/* Course Image */}
-              <div className="aspect-video bg-gradient-to-br from-blue-300 to-indigo-400 relative overflow-hidden">
+              <div className="aspect-video bg-gradient-to-br from-purple-600 to-purple-800 relative overflow-hidden">
                 <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                   <div className="text-white text-center">
                     <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2">
@@ -110,7 +110,7 @@ export default function PopularCoursesSection() {
                   </div>
                 </div>
                 <div className="absolute top-4 left-4">
-                  <span className="bg-amber-300 text-black px-2 py-1 rounded text-xs font-semibold">
+                  <span className="bg-purple-500 text-white px-2 py-1 rounded text-xs font-semibold">
                     {course.category}
                   </span>
                 </div>
@@ -118,29 +118,29 @@ export default function PopularCoursesSection() {
 
               <CardContent className="p-6">
                 <div className="mb-4">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 line-clamp-2">
+                  <h3 className="text-xl font-semibold text-white mb-2 line-clamp-2">
                     {course.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-2">
+                  <p className="text-gray-300 text-sm mb-2">
                     by {course.instructor}
                   </p>
-                  <p className="text-sm text-gray-500">{course.level}</p>
+                  <p className="text-sm text-gray-400">{course.level}</p>
                 </div>
 
                 <div className="flex items-center mb-4">
                   <div className="flex items-center mr-4">
-                    <span className="text-amber-400 text-sm">★</span>
-                    <span className="text-sm font-semibold ml-1 text-gray-900">
+                    <span className="text-purple-400 text-sm">★</span>
+                    <span className="text-sm font-semibold ml-1 text-white">
                       {course.rating}
                     </span>
                   </div>
-                  <span className="text-sm text-gray-500">
+                  <span className="text-sm text-gray-400">
                     ({course.students.toLocaleString()} students)
                   </span>
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-gray-900">
+                  <span className="text-2xl font-bold text-white">
                     {course.price}
                   </span>
                   <Button size="sm">Enroll Now</Button>
