@@ -15,6 +15,18 @@ export default function Button({
 }: ButtonProps) {
   const baseStyles = 'font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
   
+  // If custom className is provided, use minimal base styles to avoid conflicts
+  if (className) {
+    return (
+      <button 
+        className={`${baseStyles} ${className}`}
+        {...props}
+      >
+        {children}
+      </button>
+    );
+  }
+  
   const variants = {
     primary: 'bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-400',
     secondary: 'bg-gray-500 text-white hover:bg-gray-600 focus:ring-gray-400',
@@ -29,7 +41,7 @@ export default function Button({
   
   return (
     <button 
-      className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
+      className={`${baseStyles} ${variants[variant]} ${sizes[size]}`}
       {...props}
     >
       {children}
