@@ -2,18 +2,18 @@ import Button from "../ui/Button";
 
 export default function HeroSection() {
   return (
-    <section className="bg-gradient-to-br from-black via-gray-900 to-purple-900 text-white">
+    <section className="bg-white text-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-black">
                 Upskill your team with
                 <br />
-                <span className="text-purple-400">expert-led courses</span>
+                <span className="text-purple-600">expert-led courses</span>
               </h1>
-              <p className="text-xl lg:text-2xl text-gray-300 leading-relaxed">
+              <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed">
                 Give your workforce the skills they need to stay competitive.
                 Access 25,000+ courses taught by real-world experts.
               </p>
@@ -22,46 +22,46 @@ export default function HeroSection() {
               <Button className="px-6 py-3 text-lg bg-purple-600 hover:bg-purple-700 text-white hover:text-white font-bold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 hover:shadow-lg hover:shadow-purple-500/20">
                 Start Free Trial
               </Button>
-              <Button className="px-6 py-3 text-lg border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white bg-transparent font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 hover:shadow-lg hover:shadow-purple-500/20">
+              <Button className="px-6 py-3 text-lg border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white bg-white font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 hover:shadow-lg hover:shadow-purple-500/20">
                 Request Demo
               </Button>
             </div>
             {/* Trust Indicators */}
             <div className="pt-8">
-              <p className="text-gray-400 text-sm mb-4">
+              <p className="text-gray-500 text-sm mb-4">
                 Trusted by 15,000+ companies worldwide
               </p>
               <div className="flex items-center space-x-8 opacity-75">
-                <div className="text-white font-semibold">Microsoft</div>
-                <div className="text-white font-semibold">Apple</div>
-                <div className="text-white font-semibold">Google</div>
-                <div className="text-white font-semibold">Netflix</div>
-                <div className="text-white font-semibold">Amazon</div>
+                <div className="text-black font-semibold">Microsoft</div>
+                <div className="text-black font-semibold">Apple</div>
+                <div className="text-black font-semibold">Google</div>
+                <div className="text-black font-semibold">Netflix</div>
+                <div className="text-black font-semibold">Amazon</div>
               </div>
             </div>
           </div>
 
           {/* Right Content - Hero Image/Video */}
           <div className="relative">
-            <div className="bg-purple-900/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30">
-              <div className="aspect-video bg-gradient-to-br from-purple-800/20 to-black/20 rounded-xl flex items-center justify-center">
+            <div className="bg-gray-50 border border-purple-200 rounded-2xl p-8">
+              <div className="aspect-video bg-gradient-to-br from-purple-50 to-white rounded-xl flex items-center justify-center border border-purple-100">
                 <div className="text-center space-y-4">
-                  <div className="w-20 h-20 bg-purple-600/40 rounded-full flex items-center justify-center mx-auto">
+                  <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto">
                     <svg
-                      className="w-8 h-8 text-purple-300"
+                      className="w-8 h-8 text-white"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   </div>
-                  <p className="text-purple-300">Watch Demo</p>
+                  <p className="text-purple-600 font-medium">Watch Demo</p>
                 </div>
               </div>
             </div>
 
             {/* Floating Stats */}
-            <div className="absolute -bottom-4 -left-4 bg-black border border-purple-500 rounded-lg p-4 shadow-xl shadow-purple-500/20">
+            <div className="absolute -bottom-4 -left-4 bg-white border border-purple-200 rounded-lg p-4 shadow-xl shadow-purple-500/10">
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center">
                   <svg
@@ -79,15 +79,15 @@ export default function HeroSection() {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-white font-semibold">
+                  <div className="text-black font-semibold">
                     98% Success Rate
                   </div>
-                  <div className="text-gray-400 text-sm">Course Completion</div>
+                  <div className="text-gray-600 text-sm">Course Completion</div>
                 </div>
               </div>
             </div>
 
-            <div className="absolute -top-4 -right-4 bg-black border border-purple-500 rounded-lg p-4 shadow-xl shadow-purple-500/20">
+            <div className="absolute -top-4 -right-4 bg-white border border-purple-200 rounded-lg p-4 shadow-xl shadow-purple-500/10">
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center">
                   <svg
@@ -105,10 +105,10 @@ export default function HeroSection() {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-white font-semibold">
+                  <div className="text-black font-semibold">
                     50M+ Students
                   </div>
-                  <div className="text-gray-400 text-sm">
+                  <div className="text-gray-600 text-sm">
                     Learning Worldwide
                   </div>
                 </div>
