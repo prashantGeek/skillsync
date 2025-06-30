@@ -93,7 +93,7 @@ export default function PopularCoursesSection() {
  {courses.map((course) => (
  <Card key={course.id} hover className="overflow-hidden">
  {/* Course Image */}
- <div className="aspect-video bg-gradient-to-br from-blue-400 to-purple-500 relative overflow-hidden">
+ <div className="aspect-video bg-gradient-to-br from-blue-300 to-indigo-400 relative overflow-hidden">
  <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
  <div className="text-white text-center">
  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2">
@@ -105,7 +105,7 @@ export default function PopularCoursesSection() {
  </div>
  </div>
  <div className="absolute top-4 left-4">
- <span className="bg-yellow-400 text-black px-2 py-1 rounded text-xs font-semibold">
+ <span className="bg-amber-300 text-black px-2 py-1 rounded text-xs font-semibold">
  {course.category}
  </span>
  </div>
@@ -122,7 +122,7 @@ export default function PopularCoursesSection() {
 
  <div className="flex items-center mb-4">
  <div className="flex items-center mr-4">
- <span className="text-yellow-500 text-sm">★</span>
+ <span className="text-amber-400 text-sm">★</span>
  <span className="text-sm font-semibold ml-1 text-gray-900">{course.rating}</span>
  </div>
  <span className="text-sm text-gray-500">

@@ -2,7 +2,7 @@ import Button from '../ui/Button';
 
 export default function HeroSection() {
  return (
- <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white">
+ <section className="bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-700 text-white">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
  {/* Left Content */}
@@ -10,7 +10,7 @@ export default function HeroSection() {
  <div className="space-y-4">
  <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
  Upskill your team with
- <span className="block text-yellow-400">expert-led courses</span>
+ <span className="block text-amber-300">expert-led courses</span>
  </h1>
  <p className="text-xl lg:text-2xl text-blue-100 leading-relaxed">
  Give your workforce the skills they need to stay competitive. 
@@ -19,10 +19,10 @@ export default function HeroSection() {
  </div>
 
  <div className="flex flex-col sm:flex-row gap-4">
- <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 :bg-yellow-500 text-black font-bold">
+ <Button size="lg" className="bg-amber-400 hover:bg-amber-500 text-black font-bold">
  Start Free Trial
  </Button>
- <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-700 :bg-gray-300 :text-gray-900">
+ <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600">
  Request Demo
  </Button>
  </div>
@@ -58,7 +58,7 @@ export default function HeroSection() {
  {/* Floating Stats */}
  <div className="absolute -bottom-4 -left-4 bg-white rounded-lg p-4 shadow-xl">
  <div className="flex items-center space-x-3">
- <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+ <div className="w-10 h-10 bg-green-400 rounded-full flex items-center justify-center">
  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
  </svg>
@@ -72,7 +72,7 @@ export default function HeroSection() {
 
  <div className="absolute -top-4 -right-4 bg-white rounded-lg p-4 shadow-xl">
  <div className="flex items-center space-x-3">
- <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
+ <div className="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center">
  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
  </svg>
