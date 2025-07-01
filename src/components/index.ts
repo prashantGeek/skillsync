@@ -9,6 +9,7 @@ export { default as Footer } from './layout/Footer';
 // Section Components
 export { default as HeroSection } from './sections/HeroSection';
 export { default as FeaturesSection } from './sections/FeaturesSection';
-export { default as PopularCoursesSection } from './sections/PopularCoursesSection';
 export { default as TestimonialsSection } from './sections/TestimonialsSection';
 export { default as CTASection } from './sections/CTASection';
+export { default as AboutSection } from './sections/AboutSection';
+export { default as AboutPreviewSection } from './sections/AboutPreviewSection';
