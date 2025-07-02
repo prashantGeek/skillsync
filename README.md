@@ -11,8 +11,36 @@ yarn dev
 # or
 pnpm dev
 # or
-bun dev
-```
+bun # 📘 SkillSync - Online Learning Platform for Corporate Employees
+
+**SkillSync** is a modern online training platform built with **Next.js**, designed specifically for corporate environments. It provides employees with tailored learning paths and courses, while enabling secure, seamless **organization-based SSO login** for streamlined access.
+
+---
+
+## 🚀 Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Authentication**: NextAuth.js with SAML / OAuth / OIDC SSO
+- **Database**: PostgreSQL or MongoDB
+- **ORM**: Prisma / Mongoose
+- **Deployment**: Vercel / Docker / Custom CI
+
+---
+
+## 🔐 Key Features
+
+- 🏢 **Organization-based login** with Single Sign-On (SSO)
+- 🔐 Supports SAML, OAuth, and OpenID Connect
+- 🧑‍💼 Role-based access (Admin, Instructor, Employee)
+- 📚 Enroll in and complete courses
+- 🧾 Certificate generation for course completion
+- 📊 Admin dashboard for tracking engagement
+- 📦 Scalable and modular architecture
+- 🌐 Fully responsive across devices
+
+---
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
