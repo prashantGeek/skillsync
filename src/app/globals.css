@@ -26,4 +26,38 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
+  /* Course card hover effects */
+  .course-card {
+    transition: all 0.3s ease;
+  }
+
+  .course-card:hover {
+    transform: translateY(-4px);
+  }
+
+  /* Rating stars */
+  .star-rating {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Custom scrollbar for course content */
+  .course-content::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .course-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+  }
+
+  .course-content::-webkit-scrollbar-thumb {
+    background: #8b5cf6;
+    border-radius: 3px;
+  }
+
+  .course-content::-webkit-scrollbar-thumb:hover {
+    background: #7c3aed;
+  }
 }
