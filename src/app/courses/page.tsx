@@ -7,7 +7,7 @@ export default function CoursesPage() {
     <div className="min-h-screen bg-white">
       <Header />
       <main>
-        <CoursesSection showAll={true} maxCourses={12} />
+        <CoursesSection />
       </main>
       <Footer />
     </div>
