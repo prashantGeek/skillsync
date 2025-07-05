@@ -22,3 +22,10 @@ export { default as BusinessSolutionsSection } from './sections/BusinessSolution
 export { default as BusinessTestimonialsSection } from './sections/BusinessTestimonialsSection';
 export { default as BusinessPricingSection } from './sections/BusinessPricingSection';
 export { default as BusinessCTASection } from './sections/BusinessCTASection';
+
+// Teach Section Components
+export { default as TeachHeroSection } from './sections/TeachHeroSection';
+export { default as TeachBenefitsSection } from './sections/TeachBenefitsSection';
+export { default as TeachHowItWorksSection } from './sections/TeachHowItWorksSection';
+export { default as TeachPricingSection } from './sections/TeachPricingSection';
+export { default as TeachCTASection } from './sections/TeachCTASection';
