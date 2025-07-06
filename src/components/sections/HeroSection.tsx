@@ -1,4 +1,5 @@
 import Button from "../ui/Button";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -19,9 +20,11 @@ export default function HeroSection() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="px-6 py-3 text-lg bg-purple-600 hover:bg-purple-700 text-white hover:text-white font-bold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 hover:shadow-lg hover:shadow-purple-500/20">
-                Start Free Trial
-              </Button>
+              <Link href="/trial">
+                <Button className="px-6 py-3 text-lg bg-purple-600 hover:bg-purple-700 text-white hover:text-white font-bold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 hover:shadow-lg hover:shadow-purple-500/20">
+                  Start Free Trial
+                </Button>
+              </Link>
               <Button className="px-6 py-3 text-lg border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white bg-white font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 hover:shadow-lg hover:shadow-purple-500/20">
                 Request Demo
               </Button>

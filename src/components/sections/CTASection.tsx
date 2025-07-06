@@ -1,4 +1,5 @@
 import Button from '../ui/Button';
+import Link from 'next/link';
 
 export default function CTASection() {
   return (
@@ -14,9 +15,11 @@ export default function CTASection() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button className="px-8 py-3 text-lg bg-white text-purple-600 hover:bg-gray-100 hover:text-purple-700 font-bold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white hover:shadow-lg">
-              Start Free 30-Day Trial
-            </Button>
+            <Link href="/trial">
+              <Button className="px-8 py-3 text-lg bg-white text-purple-600 hover:bg-gray-100 hover:text-purple-700 font-bold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white hover:shadow-lg">
+                Start Free 30-Day Trial
+              </Button>
+            </Link>
             <Button className="px-8 py-3 text-lg border-2 border-white text-white hover:bg-white hover:text-purple-600 bg-transparent font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white hover:shadow-lg">
               Schedule a Demo
             </Button>
