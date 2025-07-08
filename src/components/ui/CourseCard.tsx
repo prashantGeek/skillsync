@@ -115,131 +115,152 @@ export default function CourseCard({ course, onEnroll, onPreview }: CourseCardPr
   };
 
   return (
-    <Card className="overflow-hidden" hover>
+    <Card className="overflow-hidden group course-card" hover variant="elevated">
       <div className="relative">
-        <img
-          src={course.thumbnail}
-          alt={course.title}
-          className="w-full h-48 object-cover"
-        />
+        <div className="overflow-hidden">
+          <img
+            src={course.thumbnail}
+            alt={course.title}
+            className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+          />
+        </div>
+        
+        {/* Enhanced Badges */}
         <div className="absolute top-3 left-3 flex gap-2">
           {course.isPopular && (
-            <span className="bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-              Popular
+            <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+              🔥 Popular
             </span>
           )}
           {course.isBestseller && (
-            <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-              Bestseller
+            <span className="bg-gradient-to-r from-emerald-500 to-green-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+              ⭐ Bestseller
             </span>
           )}
         </div>
+        
+        {/* Enhanced Preview Button */}
         <div className="absolute top-3 right-3">
           <button 
             onClick={handlePreview}
-            className="bg-white/90 p-2 rounded-full hover:bg-white transition-colors"
+            className="glass bg-white/90 p-3 rounded-full hover:bg-white hover:scale-110 transition-all duration-300 shadow-lg group/btn"
           >
-            <PlayIcon className="h-5 w-5 text-purple-600" />
+            <PlayIcon className="h-5 w-5 text-purple-600 group-hover/btn:text-purple-700" />
           </button>
         </div>
+
+        {/* Gradient Overlay on Hover */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
 
-      <CardContent className="p-6">
-        <div className="flex items-center justify-between mb-2">
-          <span className="text-sm text-purple-600 font-medium">
+      <CardContent className="p-6 bg-gradient-to-b from-white to-gray-50/50">
+        <div className="flex items-center justify-between mb-3">
+          <span className="inline-flex items-center bg-gradient-to-r from-purple-100 to-indigo-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">
             {course.category}
           </span>
-          <span className="text-sm text-gray-500">
+          <span className="text-sm text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
             {course.level}
           </span>
         </div>
 
-        <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
+        <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-purple-700 transition-colors">
           {course.title}
         </h3>
 
-        <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+        <p className="text-gray-600 text-sm mb-4 line-clamp-3 leading-relaxed">
           {course.description}
         </p>
 
-        {/* Instructor */}
-        <div className="flex items-center mb-4">
+        {/* Enhanced Instructor */}
+        <div className="flex items-center mb-4 p-2 rounded-lg bg-gray-50 group-hover:bg-purple-50 transition-colors">
           <img
             src={course.instructorImage}
             alt={course.instructor}
-            className="w-8 h-8 rounded-full mr-3"
+            className="w-10 h-10 rounded-full mr-3 border-2 border-white shadow-sm"
           />
-          <span className="text-sm text-gray-700">{course.instructor}</span>
+          <span className="text-sm font-medium text-gray-700 group-hover:text-purple-700 transition-colors">
+            {course.instructor}
+          </span>
         </div>
 
-        {/* Rating */}
-        <div className="flex items-center mb-4">
+        {/* Enhanced Rating */}
+        <div className="flex items-center mb-4 p-2 rounded-lg bg-yellow-50">
           <div className="flex items-center mr-2">
             {renderStars(course.rating)}
           </div>
-          <span className="text-sm font-semibold text-gray-900 mr-1">
+          <span className="text-sm font-bold text-gray-900 mr-1">
             {course.rating}
           </span>
           <span className="text-sm text-gray-500">
-            ({course.reviewCount.toLocaleString()})
+            ({course.reviewCount.toLocaleString()} reviews)
           </span>
         </div>
 
-        {/* Course Stats */}
-        <div className="flex items-center text-sm text-gray-500 mb-4 space-x-4">
-          <div className="flex items-center">
-            <ClockIcon className="h-4 w-4 mr-1" />
-            {course.duration}
+        {/* Enhanced Course Stats */}
+        <div className="grid grid-cols-3 gap-2 mb-4">
+          <div className="flex flex-col items-center p-2 rounded-lg bg-blue-50 group-hover:bg-blue-100 transition-colors">
+            <ClockIcon className="h-4 w-4 text-blue-600 mb-1" />
+            <span className="text-xs text-blue-700 font-medium">{course.duration}</span>
           </div>
-          <div className="flex items-center">
-            <BookOpenIcon className="h-4 w-4 mr-1" />
-            {course.lessons} lessons
+          <div className="flex flex-col items-center p-2 rounded-lg bg-green-50 group-hover:bg-green-100 transition-colors">
+            <BookOpenIcon className="h-4 w-4 text-green-600 mb-1" />
+            <span className="text-xs text-green-700 font-medium">{course.lessons} lessons</span>
           </div>
-          <div className="flex items-center">
-            <UserGroupIcon className="h-4 w-4 mr-1" />
-            {course.studentsEnrolled.toLocaleString()}
+          <div className="flex flex-col items-center p-2 rounded-lg bg-purple-50 group-hover:bg-purple-100 transition-colors">
+            <UserGroupIcon className="h-4 w-4 text-purple-600 mb-1" />
+            <span className="text-xs text-purple-700 font-medium">{course.studentsEnrolled.toLocaleString()}</span>
           </div>
         </div>
 
-        {/* Progress Bar */}
+        {/* Enhanced Progress Bar */}
         <div className="mb-4">
-          <div className="flex justify-between text-sm text-gray-600 mb-1">
-            <span>Completion Rate</span>
-            <span>{course.completionRate}%</span>
+          <div className="flex justify-between text-sm text-gray-600 mb-2">
+            <span className="font-medium">Completion Rate</span>
+            <span className="font-bold text-purple-600">{course.completionRate}%</span>
           </div>
-          <div className="w-full bg-gray-200 rounded-full h-2">
+          <div className="w-full bg-gray-200 rounded-full h-3 shadow-inner">
             <div
-              className="bg-purple-600 h-2 rounded-full"
+              className="bg-gradient-to-r from-purple-500 to-indigo-500 h-3 rounded-full shadow-sm transition-all duration-500"
               style={{ width: `${course.completionRate}%` }}
             ></div>
           </div>
         </div>
 
-        {/* Tags */}
+        {/* Enhanced Tags */}
         <div className="flex flex-wrap gap-1 mb-4">
           {course.tags.slice(0, 3).map((tag, index) => (
             <span
               key={index}
-              className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs"
+              className="bg-gradient-to-r from-purple-100 to-indigo-100 text-purple-800 px-2 py-1 rounded-full text-xs font-medium hover:from-purple-200 hover:to-indigo-200 transition-all cursor-pointer"
             >
               {tag}
             </span>
           ))}
+          {course.tags.length > 3 && (
+            <span className="text-purple-600 text-xs font-medium px-2 py-1">
+              +{course.tags.length - 3} more
+            </span>
+          )}
         </div>
       </CardContent>
 
-      <CardFooter className="px-6 py-4 bg-gray-50 flex items-center justify-between">
-        <div className="flex items-center">
+      <CardFooter className="px-6 py-4 bg-gradient-to-r from-gray-50 to-purple-50/30 flex items-center justify-between border-t border-gray-100">
+        <div className="flex flex-col">
           {course.originalPrice && (
-            <span className="text-sm text-gray-500 line-through mr-2">
+            <span className="text-sm text-gray-500 line-through">
               ${course.originalPrice}
             </span>
           )}
-          <span className="text-2xl font-bold text-purple-600">
+          <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
             ${course.price}
           </span>
         </div>
-        <Button size="sm" onClick={handleEnroll}>
+        <Button 
+          variant="gradient" 
+          size="sm" 
+          onClick={handleEnroll}
+          className="shadow-lg hover:shadow-xl transition-all duration-300"
+        >
           Enroll Now
         </Button>
       </CardFooter>
