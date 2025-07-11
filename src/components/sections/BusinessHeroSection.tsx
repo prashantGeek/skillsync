@@ -68,13 +68,14 @@ export default function BusinessHeroSection() {
                 placeholder="Enter your work email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 px-6 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                className="flex-1 px-6 py-4 rounded-xl bg-white border-2 border-transparent text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-purple-300 shadow-lg hover:shadow-xl transition-all duration-300"
                 required
               />
               <Button 
                 type="submit"
                 size="lg"
-                className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 transform hover:scale-105"
+                glow={true}
+                className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white font-bold shadow-xl hover:shadow-2xl border-2 border-emerald-400 hover:border-emerald-300"
               >
                 Get Free Demo
               </Button>
