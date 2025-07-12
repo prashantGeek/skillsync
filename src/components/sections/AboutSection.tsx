@@ -1,3 +1,5 @@
+'use client';
+
 import Card, { CardContent } from '../ui/Card';
 import Button from '../ui/Button';
 
@@ -111,6 +113,16 @@ const teamMembers = [
 ];
 
 export default function AboutSection() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -124,10 +136,16 @@ export default function AboutSection() {
             build the workforce of the future through expert-led, skills-based education.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="px-8 py-3 text-lg bg-purple-600 hover:bg-purple-700 text-white hover:text-white font-bold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 hover:shadow-lg hover:shadow-purple-500/20">
+            <Button 
+              onClick={() => scrollToSection('our-mission')}
+              className="px-8 py-3 text-lg bg-purple-600 hover:bg-purple-700 text-white hover:text-white font-bold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 hover:shadow-lg hover:shadow-purple-500/20"
+            >
               Join Our Mission
             </Button>
-            <Button className="px-8 py-3 text-lg border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white bg-white font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 hover:shadow-lg hover:shadow-purple-500/20">
+            <Button 
+              onClick={() => scrollToSection('our-story')}
+              className="px-8 py-3 text-lg border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white bg-white font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 hover:shadow-lg hover:shadow-purple-500/20"
+            >
               Our Story
             </Button>
           </div>
@@ -151,7 +169,7 @@ export default function AboutSection() {
         </div>
 
         {/* Our Story */}
-        <div className="mb-20">
+        <div id="our-story" className="mb-20 scroll-mt-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-6">
               <h2 className="text-4xl font-bold text-black">Our Story</h2>
@@ -249,14 +267,17 @@ export default function AboutSection() {
         </div>
 
         {/* Mission Statement */}
-        <div className="bg-gradient-to-r from-purple-600 to-purple-800 rounded-2xl p-12 text-center text-white">
+        <div id="our-mission" className="bg-gradient-to-r from-purple-600 to-purple-800 rounded-2xl p-12 text-center text-white scroll-mt-20">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">Our Mission</h2>
           <p className="text-xl lg:text-2xl leading-relaxed max-w-4xl mx-auto mb-8">
             To democratize access to world-class professional education and empower 
             individuals and organizations to thrive in an ever-evolving digital economy.
           </p>
-          <Button className="px-8 py-3 text-lg bg-white text-purple-600 hover:bg-gray-100 hover:text-purple-700 font-bold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 hover:shadow-lg">
-            Join Our Mission
+          <Button 
+            onClick={() => scrollToSection('our-story')}
+            className="px-8 py-3 text-lg bg-white text-purple-600 hover:bg-gray-100 hover:text-purple-700 font-bold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 hover:shadow-lg"
+          >
+            Learn Our Story
           </Button>
         </div>
       </div>
