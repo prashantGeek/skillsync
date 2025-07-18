@@ -94,8 +94,8 @@ export default function TeachCTASection() {
                 </div>
               </div>
               <blockquote className="text-emerald-100 italic">
-                "I went from $0 to $15K monthly revenue in just 6 months. SkillSync's platform 
-                and support made all the difference."
+                &ldquo;I went from $0 to $15K monthly revenue in just 6 months. SkillSync&apos;s platform 
+                and support made all the difference.&rdquo;
               </blockquote>
             </div>
           </div>
@@ -242,7 +242,7 @@ export default function TeachCTASection() {
         <div className="mt-20 text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Have Questions? We're Here to Help
+              Have Questions? We&apos;re Here to Help
             </h3>
             <p className="text-emerald-100 mb-6">
               Our instructor success team is ready to support your teaching journey

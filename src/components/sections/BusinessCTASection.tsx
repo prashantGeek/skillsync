@@ -34,7 +34,7 @@ export default function BusinessCTASection() {
             </h2>
             
             <p className="text-xl text-purple-100 mb-8 leading-relaxed">
-              Join thousands of companies that trust SkillSync to accelerate their team's growth. 
+              Join thousands of companies that trust SkillSync to accelerate their team&apos;s growth. 
               Start your journey to a more skilled, engaged, and productive workforce today.
             </p>
 

@@ -282,7 +282,7 @@ export default function TeachPricingSection() {
               <p className="text-gray-600">No setup fees, no monthly fees. You only pay when you earn from course sales.</p>
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 mb-2">What if I don't make any sales?</h4>
+              <h4 className="font-semibold text-gray-900 mb-2">What if I don&apos;t make any sales?</h4>
               <p className="text-gray-600">You pay nothing. Our commission model means we only succeed when you succeed.</p>
             </div>
           </div>

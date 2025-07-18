@@ -2,8 +2,6 @@
 export { default as Button } from './ui/Button';
 export { default as Card, CardHeader, CardContent, CardFooter } from './ui/Card';
 export { default as CourseCard } from './ui/CourseCard';
-export { default as SignupModal } from './ui/SignupModal';
-export { default as StartTrialButton } from './ui/StartTrialButton';
 
 // Layout Components
 export { default as Header } from './layout/Header';

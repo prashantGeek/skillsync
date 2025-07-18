@@ -197,7 +197,7 @@ export default function StartTrialPage() {
         <section className="py-20 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6 py-4">
-              {trialOptions.map((option, index) => (
+              {trialOptions.map((option) => (
                 <div
                   key={option.id}
                   className="cursor-pointer"
@@ -251,7 +251,7 @@ export default function StartTrialPage() {
 
                     {/* Features */}
                     <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-3">What's included:</h4>
+                      <h4 className="font-semibold text-gray-900 mb-3">What&apos;s included:</h4>
                       <ul className="space-y-2">
                         {option.features.slice(0, 4).map((feature, fIndex) => (
                           <li key={fIndex} className="flex items-center text-sm text-gray-600">
@@ -319,7 +319,7 @@ export default function StartTrialPage() {
                     </div>
                     
                     <blockquote className="text-gray-700 italic mb-4">
-                      "{testimonial.quote}"
+                      &ldquo;{testimonial.quote}&rdquo;
                     </blockquote>
                     
                     <div className="flex text-yellow-400">

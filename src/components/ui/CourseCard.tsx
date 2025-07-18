@@ -1,7 +1,9 @@
 'use client';
 
-import Card, { CardContent, CardFooter } from '@/components/ui/Card';
-import Button from '@/components/ui/Button';
+import React from 'react';
+import Image from 'next/image';
+import Card, { CardContent, CardFooter } from './Card';
+import Button from './Button';
 
 // Icon components
 const ClockIcon = ({ className }: { className?: string }) => (
@@ -118,10 +120,14 @@ export default function CourseCard({ course, onEnroll, onPreview }: CourseCardPr
     <Card className="overflow-hidden group course-card" hover variant="elevated">
       <div className="relative">
         <div className="overflow-hidden">
-          <img
+          <Image
             src={course.thumbnail}
             alt={course.title}
+            width={400}
+            height={240}
             className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+            priority={false}
+            loading="lazy"
           />
         </div>
         
@@ -173,10 +179,14 @@ export default function CourseCard({ course, onEnroll, onPreview }: CourseCardPr
 
         {/* Enhanced Instructor */}
         <div className="flex items-center mb-4 p-2 rounded-lg bg-gray-50 group-hover:bg-purple-50 transition-colors">
-          <img
+          <Image
             src={course.instructorImage}
             alt={course.instructor}
+            width={40}
+            height={40}
             className="w-10 h-10 rounded-full mr-3 border-2 border-white shadow-sm"
+            priority={false}
+            loading="lazy"
           />
           <span className="text-sm font-medium text-gray-700 group-hover:text-purple-700 transition-colors">
             {course.instructor}
