@@ -88,7 +88,7 @@ export default function BusinessSolutionsSection() {
             Solutions for Every Business Challenge
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Whether you're scaling your team, driving digital transformation, or ensuring compliance, 
+            Whether you&apos;re scaling your team, driving digital transformation, or ensuring compliance, 
             we have the right solution for your organization.
           </p>
         </div>
@@ -142,7 +142,7 @@ export default function BusinessSolutionsSection() {
               Industry-Specific Solutions
             </h3>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Tailored training programs designed for your industry's unique challenges and requirements.
+              Tailored training programs designed for your industry&apos;s unique challenges and requirements.
             </p>
           </div>
 

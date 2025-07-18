@@ -105,7 +105,7 @@ export default function BusinessPricingSection() {
             Simple, Transparent Pricing
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Choose the plan that fits your organization's needs. All plans include a 30-day free trial.
+            Choose the plan that fits your organization&apos;s needs. All plans include a 30-day free trial.
           </p>
 
           {/* Billing Toggle */}
@@ -262,7 +262,7 @@ export default function BusinessPricingSection() {
               <p className="text-gray-600">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately.</p>
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 mb-2">What's included in the free trial?</h4>
+              <h4 className="font-semibold text-gray-900 mb-2">What&apos;s included in the free trial?</h4>
               <p className="text-gray-600">Full access to all features of your chosen plan for 30 days. No credit card required.</p>
             </div>
             <div>

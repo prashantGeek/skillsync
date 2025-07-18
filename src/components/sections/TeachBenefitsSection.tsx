@@ -94,7 +94,7 @@ export default function TeachBenefitsSection() {
             Why Choose SkillSync to Teach?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Join thousands of successful instructors who've built thriving businesses 
+            Join thousands of successful instructors who&apos;ve built thriving businesses 
             sharing their knowledge on our platform.
           </p>
         </div>
@@ -157,7 +157,7 @@ export default function TeachBenefitsSection() {
               Success Stories from Our Instructors
             </h3>
             <p className="text-xl text-gray-600">
-              Real stories from real instructors who've transformed their careers
+              Real stories from real instructors who&apos;ve transformed their careers
             </p>
           </div>
 
@@ -213,7 +213,7 @@ export default function TeachBenefitsSection() {
                 </div>
 
                 <blockquote className="text-sm text-gray-700 italic">
-                  "{story.quote}"
+                  &ldquo;{story.quote}&rdquo;
                 </blockquote>
               </div>
             ))}

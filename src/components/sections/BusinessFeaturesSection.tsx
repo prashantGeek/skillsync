@@ -87,7 +87,7 @@ export default function BusinessFeaturesSection() {
             Ready to Transform Your Workforce?
           </h3>
           <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-            Join thousands of companies who've revolutionized their training programs with SkillSync.
+            Join thousands of companies who&apos;ve revolutionized their training programs with SkillSync.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button className="bg-white text-purple-600 font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors">

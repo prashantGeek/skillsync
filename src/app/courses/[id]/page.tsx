@@ -173,7 +173,7 @@ export default function CourseDetailPage() {
         <div className="flex items-center justify-center min-h-[50vh]">
           <div className="text-center">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Course not found</h2>
-            <p className="text-gray-600">The course you're looking for doesn't exist.</p>
+            <p className="text-gray-600">The course you&apos;re looking for doesn&apos;t exist.</p>
           </div>
         </div>
         <Footer />
@@ -330,10 +330,10 @@ export default function CourseDetailPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               <div className="lg:col-span-2 space-y-8">
-                {/* What You'll Learn */}
+                {/* What You will Learn */}
                 <Card>
                   <CardHeader>
-                    <h2 className="text-2xl font-bold">What you'll learn</h2>
+                    <h2 className="text-2xl font-bold">What you&apos;ll learn</h2>
                   </CardHeader>
                   <CardContent>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
