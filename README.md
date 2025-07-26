@@ -10,7 +10,6 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
 bun # 📘 SkillSync - Online Learning Platform for Corporate Employees
 
 **SkillSync** is a modern online training platform built with **Next.js**, designed specifically for corporate environments. It provides employees with tailored learning paths and courses, while enabling secure, seamless **organization-based SSO login** for streamlined access.
