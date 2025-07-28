@@ -26,7 +26,6 @@ bun # 📘 SkillSync - Online Learning Platform for Corporate Employees
 - **ORM**: Prisma / Mongoose
 - **Deployment**: Vercel / Docker / Custom CI
 
----
 
 ## 🔐 Key Features
 
