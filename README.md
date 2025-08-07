@@ -20,8 +20,7 @@ bun # 📘 SkillSync - Online Learning Platform for Corporate Employees
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Authentication**: NextAuth.js with SAML / OAuth / OIDC SSO
-- **Database**: PostgreSQL or MongoDB
-- **ORM**: Prisma / Mongoose
+- **Database**: PostgreSQL 
 - **Deployment**: Vercel / Docker / Custom CI
 
 
