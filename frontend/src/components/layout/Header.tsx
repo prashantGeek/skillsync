@@ -1,8 +1,22 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Button from '../ui/Button';
+import SignupModal from '../ui/SignupModal';
+import { useAuth } from '@/context/AuthContext';
 
 export default function Header() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
+  const { user, logout } = useAuth();
+
+  const handleOpenModal = (loginMode: boolean) => {
+    setIsLogin(loginMode);
+    setIsModalOpen(true);
+  };
+
   return (
     <header className="bg-white border-b border-purple-200 transition-colors shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,12 +69,23 @@ export default function Header() {
 
           {/* Auth Buttons */}
           <div className="flex items-center space-x-4">
-            <Button variant="outline" size="sm">
-              Log In
-            </Button>
-            <Button size="sm">
-              Sign Up
-            </Button>
+            {user ? (
+              <div className="flex items-center space-x-4">
+                <span className="text-sm font-medium text-gray-700">Hi, {user.name || user.email}</span>
+                <Button variant="outline" size="sm" onClick={logout}>
+                  Log Out
+                </Button>
+              </div>
+            ) : (
+              <>
+                <Button variant="outline" size="sm" onClick={() => handleOpenModal(true)}>
+                  Log In
+                </Button>
+                <Button size="sm" onClick={() => handleOpenModal(false)}>
+                  Sign Up
+                </Button>
+              </>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -73,6 +98,12 @@ export default function Header() {
           </div>
         </div>
       </div>
+
+      <SignupModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        defaultIsLogin={isLogin} 
+      />
     </header>
   );
 }
