@@ -23,10 +23,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true);
 
   const login = (userData: User) => setUser(userData);
-  const logout = () => {
+  const logout = async () => {
+    try {
+      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/logout`, {
+        method: 'POST',
+        credentials: 'include',
+      });
+    } catch (e) {
+      console.error('Logout failed', e);
+    }
     setUser(null);
-    // Ideally make a backend request to clear the cookie too. 
-    // Example: fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/logout`, { method: 'POST', credentials: 'include' });
   };
 
   useEffect(() => {

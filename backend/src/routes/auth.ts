@@ -141,4 +141,9 @@ router.post('/login', async (req: Request, res: Response): Promise<void> => {
   }
 });
 
+router.post('/logout', (req: Request, res: Response): void => {
+  res.clearCookie('auth_token');
+  res.json({ success: true });
+});
+
 export default router;
