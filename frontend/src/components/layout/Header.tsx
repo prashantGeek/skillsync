@@ -10,7 +10,7 @@ import { useAuth } from '@/context/AuthContext';
 export default function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLogin, setIsLogin] = useState(false);
-  const { user, logout } = useAuth();
+  const { user, logout, loading } = useAuth();
 
   const handleOpenModal = (loginMode: boolean) => {
     setIsLogin(loginMode);
@@ -69,7 +69,9 @@ export default function Header() {
 
           {/* Auth Buttons */}
           <div className="flex items-center space-x-4">
-            {user ? (
+            {loading ? (
+              <div className="h-8 w-24 bg-gray-200 animate-pulse rounded"></div>
+            ) : user ? (
               <div className="flex items-center space-x-4">
                 <span className="text-sm font-medium text-gray-700">Hi, {user.name || user.email}</span>
                 <Button variant="outline" size="sm" onClick={logout}>

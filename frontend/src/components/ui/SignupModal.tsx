@@ -22,6 +22,8 @@ export default function SignupModal({ isOpen, onClose, defaultIsLogin = false }:
     setIsLogin(defaultIsLogin);
   }, [defaultIsLogin]);
 
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5001/api';
+
   if (!isOpen) return null;
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -29,7 +31,6 @@ export default function SignupModal({ isOpen, onClose, defaultIsLogin = false }:
     setError('');
     setLoading(true);
 
-    const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5001/api';
     const endpoint = isLogin ? `${API_URL}/auth/login` : `${API_URL}/auth/register`;
     
     // Only send name if registering
@@ -120,6 +121,21 @@ export default function SignupModal({ isOpen, onClose, defaultIsLogin = false }:
             className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition"
           >
             {loading ? 'Processing...' : (isLogin ? 'Log In' : 'Sign Up')}
+          </button>
+
+          <div className="relative flex py-5 items-center">
+            <div className="flex-grow border-t border-gray-300"></div>
+            <span className="flex-shrink-0 mx-4 text-gray-400 text-sm">or continue with</span>
+            <div className="flex-grow border-t border-gray-300"></div>
+          </div>
+
+          <button
+            type="button"
+            onClick={() => { window.location.href = `${API_URL}/auth/google` }}
+            className="w-full flex items-center justify-center border p-2 rounded hover:bg-gray-50 transition"
+          >
+            <img src="https://www.svgrepo.com/show/475656/google-color.svg" className="w-5 h-5 mr-3" alt="Google" />
+            Google
           </button>
         </form>
 

@@ -11,7 +11,8 @@ model User {
   id            String         @id @default(cuid())
   email         String         @unique
   name          String?
-  passwordHash  String
+  passwordHash  String?        // Nullable for SSO users
+  googleId      String?        @unique
   role          Role           @default(LEARNER)
   createdAt     DateTime       @default(now())
   updatedAt     DateTime       @updatedAt
