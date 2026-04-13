@@ -38,7 +38,10 @@ export default function ProfilePage() {
     <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
       <div className="flex justify-between items-center mb-6">
         <h3 className="text-xl font-bold">Instructor Dashboard</h3>
-        <button className="bg-purple-600 text-white px-4 py-2 rounded font-medium hover:bg-purple-700 transition">
+        <button 
+          onClick={() => router.push('/instructor/courses/create')}
+          className="bg-purple-600 text-white px-4 py-2 rounded font-medium hover:bg-purple-700 transition"
+        >
           Create New Course
         </button>
       </div>
