@@ -11,14 +11,18 @@ model User {
   id            String         @id @default(cuid())
   email         String         @unique
   name          String?
-  passwordHash  String
+  passwordHash  String? // Nullable for SSO users
+  googleId      String?        @unique
   role          Role           @default(LEARNER)
   createdAt     DateTime       @default(now())
   updatedAt     DateTime       @updatedAt
   courses       Course[]       @relation("InstructorCourses")
   enrollments   Enrollment[]
+  purchases     Purchase[]
   subscriptions Subscription[]
   payments      Payment[]
+  reviews       Review[]       @relation("UserReviews")
+  certificates  Certificate[]
 }
 
 enum Role {
@@ -29,42 +33,106 @@ enum Role {
 }
 
 model Course {
-  id          String       @id @default(cuid())
-  title       String
-  description String
-  price       Float        @default(0)
-  published   Boolean      @default(false)
+  id           String       @id @default(cuid())
+  title        String
+  description  String
+  thumbnailUrl String?
+  price        Float        @default(0)
+  published    Boolean      @default(false)
   instructorId String
-  instructor  User         @relation("InstructorCourses", fields: [instructorId], references: [id])
-  createdAt   DateTime     @default(now())
-  updatedAt   DateTime     @updatedAt
-  enrollments Enrollment[]
+  instructor   User         @relation("InstructorCourses", fields: [instructorId], references: [id])
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+  modules      Module[]
+  enrollments  Enrollment[]
+  purchases    Purchase[]
+  reviews      Review[]
+
+  @@index([instructorId])
+}
+
+model Module {
+  id        String   @id @default(cuid())
+  title     String
+  order     Int
+  courseId  String
+  course    Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  lessons   Lesson[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([courseId])
+}
+
+model Lesson {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  videoUrl    String?
+  duration    Int? // duration in seconds
+  order       Int
+  moduleId    String
+  module      Module   @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+  isFree      Boolean  @default(false) // free preview
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([moduleId])
+}
+
+model Review {
+  id        String   @id @default(cuid())
+  rating    Int
+  comment   String?
+  userId    String
+  user      User     @relation("UserReviews", fields: [userId], references: [id], onDelete: Cascade)
+  courseId  String
+  course    Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, courseId])
+  @@index([courseId])
+}
+
+model Certificate {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  courseId  String
+  issueDate DateTime @default(now())
+  pdfUrl    String?
+  createdAt DateTime @default(now())
+
+  @@unique([userId, courseId])
 }
 
 model Enrollment {
   id        String   @id @default(cuid())
   userId    String
-  user      User     @relation(fields: [userId], references: [id])
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   courseId  String
-  course    Course   @relation(fields: [courseId], references: [id])
+  course    Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
   progress  Float    @default(0)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   @@unique([userId, courseId])
+  @@index([userId])
+  @@index([courseId])
 }
 
 model Subscription {
-  id                 String   @id @default(cuid())
-  userId             String
-  user               User     @relation(fields: [userId], references: [id])
-  stripeCustomerId   String?
-  stripeSubscriptionId String? @unique
-  status             String
-  plan               String   @default("FREE")
-  currentPeriodEnd   DateTime?
-  createdAt          DateTime @default(now())
-  updatedAt          DateTime @updatedAt
+  id                   String    @id @default(cuid())
+  userId               String
+  user                 User      @relation(fields: [userId], references: [id])
+  stripeCustomerId     String?
+  stripeSubscriptionId String?   @unique
+  status               String
+  plan                 String    @default("FREE")
+  currentPeriodEnd     DateTime?
+  createdAt            DateTime  @default(now())
+  updatedAt            DateTime  @updatedAt
 }
 
 model Payment {
@@ -75,6 +143,20 @@ model Payment {
   currency        String   @default("USD")
   stripePaymentId String   @unique
   status          String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model Purchase {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  courseId        String
+  course          Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  stripeSessionId String   @unique
+  amount          Float
+  currency        String   @default("usd")
+  status          String   @default("pending") // pending, completed, failed
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
 }
