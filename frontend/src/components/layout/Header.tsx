@@ -73,7 +73,9 @@ export default function Header() {
               <div className="h-8 w-24 bg-gray-200 animate-pulse rounded"></div>
             ) : user ? (
               <div className="flex items-center space-x-4">
-                <span className="text-sm font-medium text-gray-700">Hi, {user.name || user.email}</span>
+                <Link href="/profile" className="text-sm font-medium text-gray-700 hover:text-purple-600 transition-colors">
+                  Hi, {user.name || user.email}
+                </Link>
                 <Button variant="outline" size="sm" onClick={logout}>
                   Log Out
                 </Button>

@@ -66,7 +66,7 @@ router.get('/me', async (req: Request, res: Response): Promise<void> => {
       return;
     }
 
-    res.json({ user: { id: user.id, email: user.email, name: user.name } });
+    res.json({ user: { id: user.id, email: user.email, name: user.name, role: user.role } });
   } catch (err) {
     res.status(401).json({ error: 'Unauthorized' });
   }
@@ -106,7 +106,7 @@ router.post('/register', async (req: Request, res: Response): Promise<void> => {
     
     // Typically set HTTP-only cookie, or return token
     res.cookie('auth_token', token, { httpOnly: true, maxAge: 86400000 });
-    res.json({ success: true, user: { id: user.id, email: user.email, name: user.name } });
+    res.json({ success: true, user: { id: user.id, email: user.email, name: user.name, role: user.role } });
   } catch (error) {
     res.status(500).json({ error: 'Internal server error' });
   }
@@ -135,7 +135,7 @@ router.post('/login', async (req: Request, res: Response): Promise<void> => {
     const token = jwt.sign({ id: user.id, role: user.role }, process.env.JWT_SECRET || 'secret', { expiresIn: '1d' });
     
     res.cookie('auth_token', token, { httpOnly: true, maxAge: 86400000 });
-    res.json({ success: true, user: { id: user.id, email: user.email, name: user.name } });
+    res.json({ success: true, user: { id: user.id, email: user.email, name: user.name, role: user.role } });
   } catch (error) {
     res.status(500).json({ error: 'Internal server error' });
   }
